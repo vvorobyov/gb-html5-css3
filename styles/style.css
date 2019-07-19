@@ -1,0 +1,241 @@
+:root {
+    --main-font-color: #000;
+    --dark-bg-color: #445162;
+    --dark-font-color: #fff;
+    --dark-h-color: #fff;
+    --light1-bg-color: #fff;
+    --light-h-color: #445162;
+    --light-font-color: #333;
+    --light2-bg-color: #f5f5f5;
+    --review-bg-color: #ebebeb;
+    --author-font-color: #989898;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+html {
+    font: 16px 'Arial MT', sans-serif;
+    line-height: 1.5em;
+}
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.block{
+    padding: 50px;
+    overflow: auto;
+}
+.clr:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.container>header {
+    background-color: var(--dark-bg-color);
+}
+
+.container>header * {
+    color: var(--dark-font-color);
+}
+
+.container>section:nth-child(2n+1) {
+    background-color: var(--light2-bg-color);
+}
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.center{
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.75em;
+    line-height: .75em;
+    margin-bottom: .85em;
+}
+
+h2 {
+    font-size: 1.875em;
+    color: var(--light-h-color);
+    line-height: 1em;
+    margin-bottom: 1em;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: var(--light-h-color);
+    line-height: .9em;
+    margin-bottom: .625em;
+}
+
+ul.check {
+    list-style-type: none;
+    font-size: 1.25em;
+}
+
+ul.check .icon-ok {
+    font-size: 1.625em;
+    line-height: 1em;
+}
+
+.aboutContent {
+    width: 660px;
+}
+
+.aboutContent p {
+    padding-bottom: 1.25em;
+}
+
+.aboutImg{
+    width: 430px;
+    height: 245px;
+}
+
+.digitalList,
+.reviewList {
+    list-style-type: none;
+    overflow: auto;
+    margin-bottom: -2em;
+}
+
+.digitalList li,
+.reviewList li {
+    float: left;
+    width: 566px;
+    margin-left: 1.5em;
+    margin-bottom: 2em;
+}
+
+.digitalList .icon-plus-squared {
+    min-height: 100%;
+    font-size: 2em;
+    color: var(--light-h-color);
+}
+
+.digitalList .icon-plus-squared:before {
+    margin: 0;
+}
+
+.digitalList div {
+    margin-left: 2.5em;
+}
+
+.screenshots>article {
+    overflow: auto;
+    margin-bottom: 1.875em;
+    margin-right: 1em;
+    width: 574px;
+    float: left;
+}
+
+.screenshots>article>img {
+    width: 200px;
+    height: 150px;
+    margin-right: 1em;
+}
+
+.screenshots>article>div {
+    width: 358px;
+
+}
+
+.userpic {
+    display: block;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 1em;
+}
+
+.review {
+    padding: 1em;
+    margin-left: 103px;
+    background-color: var(--review-bg-color);
+    border-radius: .5em;
+}
+
+.review>p:first-child {
+    font-style: italic;
+}
+
+.reviewArrow {
+    width: 0;
+    margin-top: 1.5em;
+    border-top: .75em solid transparent;
+    border-bottom: .75em solid transparent;
+    border-right: .75em solid var(--review-bg-color);
+
+}
+
+.reviewAuthor {
+    color: var(--author-font-color);
+    font-size: 0.875em;
+    line-height: 1.125em;
+    margin-top: 1em;
+}
+
+.buyBlock {
+    /*height: 554px;*/
+    /*position: relative;*/
+    padding: 50px 100px 50px 145px;
+}
+
+.buyItem {
+    /*position: relative;*/
+    /*bottom: 10px;*/
+    margin-right: 45px;
+    vertical-align: bottom;
+    width: 300px;
+    padding: 1em 1.25em 1.25em;
+    float: left;
+    background-color: var(--dark-bg-color);
+    border: 1px solid var(--dark-bg-color);
+    border-radius: .5em;
+    box-sizing: border-box;
+}
+
+.buyItem>h3 {
+    color: var(--dark-h-color);
+}
+
+.coast {
+    background-color: var(--light1-bg-color);
+    color: var(--light-h-color);
+    font-size: 2.5em;
+    padding: .5em 0;
+    margin: 0 -0.5em;
+}
+
+.buyItem>ol {
+
+    font-size: .875em;
+    margin: 1.25rem 0 1.25rem 1.25rem;
+    text-align: left;
+    color: var(--dark-font-color);
+}
+
+.buyItem:first-child {
+    margin-left: 45px;
+}
+
+.buyItem button {
+    display: block;
+    width: 100%;
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding: .875rem;
+    border-radius: 0.5rem;
+    background-color: var(--light1-bg-color);
+    color: var(--light-h-color);
+}
