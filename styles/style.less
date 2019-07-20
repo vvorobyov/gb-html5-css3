@@ -4,7 +4,7 @@
 @oddSectionBg: #f5f5f5;
 @mainFontColor: #333;
 @blockquoteBg: #ebebeb;
-
+@reviewAuthorColor: #989898;
 
 // Mixins
 .clearfix() {
@@ -45,7 +45,8 @@ h2,
 h3,
 p,
 ul,
-ol {
+ol,
+blockquote {
     margin: 0;
     padding: 0;
 }
@@ -199,6 +200,77 @@ main>section:nth-of-type(even) {
         &>h3 {
             .h3();
             color: @darkColor;
+        }
+    }
+}
+
+// Reviews
+
+.reviewsSection {
+    .pageBlock();
+
+    &>h2 {
+        .h2();
+        color: @darkColor;
+        text-align: center;
+    }  
+
+    &>ul {
+        &::after{
+            .clearfix();
+        }
+        list-style: none; 
+
+        &>li{
+            float: left;
+            width: ~"calc(50% - 1rem)";
+
+            &:nth-of-type(odd) {
+                margin-right: 2rem;
+            }
+            &:nth-of-type(n+3) {
+                margin-top: 1.5rem;
+            }
+
+            &>img {
+                float: left;
+                width: 75px;
+                height: 75px;
+                border-radius: 50%;
+            }
+
+            &>.review {
+                position: relative;
+                margin-left: ~"calc(75px + 1rem)";
+                background-color: @blockquoteBg;
+                border-radius: .5rem;
+                padding: 1rem 1.25rem;
+                font-size: .875rem;
+                line-height: 1.125rem;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 1rem;
+                    height: 1rem;
+                    position: absolute;
+                    top: 27px;
+                    left: -.4375rem;
+                    background: @blockquoteBg;
+                    transform: rotate(45deg)
+                }
+
+                &>blockquote {
+                    font-style: italic;
+                    padding-bottom: .75rem;
+                    
+                }
+
+                &>.reviewAuthor {
+                    color: @reviewAuthorColor;
+                }
+            }
+
         }
     }
 

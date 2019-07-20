@@ -8,7 +8,8 @@ h2,
 h3,
 p,
 ul,
-ol {
+ol,
+blockquote {
   margin: 0;
   padding: 0;
 }
@@ -152,4 +153,70 @@ main > section:nth-of-type(even) {
   margin-bottom: .5rem;
   line-height: 1.125em;
   color: #445162;
+}
+.reviewsSection {
+  padding: 3.125rem 3.125rem;
+}
+.reviewsSection::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.reviewsSection > h2 {
+  font-size: 1.875rem;
+  margin-bottom: 1em;
+  line-height: 1.2em;
+  color: #445162;
+  text-align: center;
+}
+.reviewsSection > ul {
+  list-style: none;
+}
+.reviewsSection > ul::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.reviewsSection > ul > li {
+  float: left;
+  width: calc(50% - 1rem);
+}
+.reviewsSection > ul > li:nth-of-type(odd) {
+  margin-right: 2rem;
+}
+.reviewsSection > ul > li:nth-of-type(n+3) {
+  margin-top: 1.5rem;
+}
+.reviewsSection > ul > li > img {
+  float: left;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+.reviewsSection > ul > li > .review {
+  position: relative;
+  margin-left: calc(75px + 1rem);
+  background-color: #ebebeb;
+  border-radius: .5rem;
+  padding: 1rem 1.25rem;
+  font-size: .875rem;
+  line-height: 1.125rem;
+}
+.reviewsSection > ul > li > .review::before {
+  content: '';
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 27px;
+  left: -0.4375rem;
+  background: #ebebeb;
+  transform: rotate(45deg);
+}
+.reviewsSection > ul > li > .review > blockquote {
+  font-style: italic;
+  padding-bottom: .75rem;
+}
+.reviewsSection > ul > li > .review > .reviewAuthor {
+  color: #989898;
 }
