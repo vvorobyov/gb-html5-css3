@@ -25,12 +25,23 @@
     font-size: 1.875rem;
     margin-bottom: 1em;
     line-height: 1.2em;
+    font-weight: 400;
 }
 
 .h3() {
     font-size: 1.5rem;
     margin-bottom: .5rem;
     line-height: 1.125em;
+    font-weight: 400;
+}
+
+.button() {
+    background-color: @lightColor;
+    border: none;
+    text-transform: capitalize;
+    color: @darkColor;
+    font-weight: 700;
+    height: 2.75rem;
 }
 
 // Basic
@@ -75,6 +86,7 @@ blockquote {
         margin-bottom: 3.125rem;
         font-size: 3.25rem;
         line-height: 0.85em;
+        font-weight: 400;
     }
 
     &>img {
@@ -140,7 +152,7 @@ main>section:nth-of-type(even) {
         .h2();
         color: @darkColor;
         text-align: center;
-    }  
+    }
 
     &>ul {
         &::after {
@@ -165,16 +177,16 @@ main>section:nth-of-type(even) {
     }
 }
 
-.screenshotsSection{
+.screenshotsSection {
     .pageBlock();
 
     &>h2 {
         .h2();
         color: @darkColor;
         text-align: center;
-    }  
+    }
 
-    &>article{
+    &>article {
         float: left;
         width: ~"calc(50% - .5rem)";
 
@@ -213,21 +225,23 @@ main>section:nth-of-type(even) {
         .h2();
         color: @darkColor;
         text-align: center;
-    }  
+    }
 
     &>ul {
-        &::after{
+        &::after {
             .clearfix();
         }
-        list-style: none; 
 
-        &>li{
+        list-style: none;
+
+        &>li {
             float: left;
             width: ~"calc(50% - 1rem)";
 
             &:nth-of-type(odd) {
                 margin-right: 2rem;
             }
+
             &:nth-of-type(n+3) {
                 margin-top: 1.5rem;
             }
@@ -263,15 +277,86 @@ main>section:nth-of-type(even) {
                 &>blockquote {
                     font-style: italic;
                     padding-bottom: .75rem;
-                    
+
                 }
 
                 &>.reviewAuthor {
                     color: @reviewAuthorColor;
                 }
             }
-
         }
     }
+}
 
+// Buy it now
+.buySection {
+    .pageBlock(9.0625rem);
+    &>h2 {
+        .h2();
+        color: @darkColor;
+        text-align: center;
+    }
+
+    &>.buyFlex{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    & article {
+        float: left;
+        width: 300px;
+        background-color: @darkColor;
+        border: 1px solid @darkColor;
+        border-radius: .25rem;
+        box-sizing: border-box;
+        overflow: hidden;
+        padding: 1rem 1.25rem 1.25rem;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        &>h3 {
+            .h3();
+            color: @lightColor;
+            text-align: center;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+        &>.coast {
+            font-size: 2.5rem;
+            padding: 1rem;
+            text-align: center;
+            color: @darkColor;
+            background-color: @lightColor;
+            margin: 0 -1.25rem;
+        }
+
+        &>ol {
+            list-style-position: inside;
+            font-size: .875rem;
+            color: @lightColor;
+            margin: 1rem 0;
+            line-height: 1.5rem;
+        }
+        & button {
+            .button();
+            display: block;
+            width: 100%;
+            font-size: 1.125rem;
+        }
+    }
+}
+
+// Page footer
+.pageFooter {
+    .pageBlock(0);
+    background-color: @darkColor;
+
+    &>h2 {
+        .h2();
+        color: @lightColor;
+        text-align: center;
+    }
 }

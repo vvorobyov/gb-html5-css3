@@ -33,6 +33,7 @@ blockquote {
   margin-bottom: 3.125rem;
   font-size: 3.25rem;
   line-height: 0.85em;
+  font-weight: 400;
 }
 .pageHeader > img {
   float: right;
@@ -65,6 +66,7 @@ main > section:nth-of-type(even) {
   font-size: 1.875rem;
   margin-bottom: 1em;
   line-height: 1.2em;
+  font-weight: 400;
   color: #445162;
 }
 .aboutProductSection > img {
@@ -93,6 +95,7 @@ main > section:nth-of-type(even) {
   font-size: 1.875rem;
   margin-bottom: 1em;
   line-height: 1.2em;
+  font-weight: 400;
   color: #445162;
   text-align: center;
 }
@@ -126,6 +129,7 @@ main > section:nth-of-type(even) {
   font-size: 1.875rem;
   margin-bottom: 1em;
   line-height: 1.2em;
+  font-weight: 400;
   color: #445162;
   text-align: center;
 }
@@ -152,6 +156,7 @@ main > section:nth-of-type(even) {
   font-size: 1.5rem;
   margin-bottom: .5rem;
   line-height: 1.125em;
+  font-weight: 400;
   color: #445162;
 }
 .reviewsSection {
@@ -166,6 +171,7 @@ main > section:nth-of-type(even) {
   font-size: 1.875rem;
   margin-bottom: 1em;
   line-height: 1.2em;
+  font-weight: 400;
   color: #445162;
   text-align: center;
 }
@@ -219,4 +225,90 @@ main > section:nth-of-type(even) {
 }
 .reviewsSection > ul > li > .review > .reviewAuthor {
   color: #989898;
+}
+.buySection {
+  padding: 3.125rem 9.0625rem;
+}
+.buySection::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.buySection > h2 {
+  font-size: 1.875rem;
+  margin-bottom: 1em;
+  line-height: 1.2em;
+  font-weight: 400;
+  color: #445162;
+  text-align: center;
+}
+.buySection > .buyFlex {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.buySection article {
+  float: left;
+  width: 300px;
+  background-color: #445162;
+  border: 1px solid #445162;
+  border-radius: .25rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 1rem 1.25rem 1.25rem;
+}
+.buySection article:last-of-type {
+  margin-right: 0;
+}
+.buySection article > h3 {
+  font-size: 1.5rem;
+  margin-bottom: .5rem;
+  line-height: 1.125em;
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.buySection article > .coast {
+  font-size: 2.5rem;
+  padding: 1rem;
+  text-align: center;
+  color: #445162;
+  background-color: #fff;
+  margin: 0 -1.25rem;
+}
+.buySection article > ol {
+  list-style-position: inside;
+  font-size: .875rem;
+  color: #fff;
+  margin: 1rem 0;
+  line-height: 1.5rem;
+}
+.buySection article button {
+  background-color: #fff;
+  border: none;
+  text-transform: capitalize;
+  color: #445162;
+  font-weight: 700;
+  height: 2.75rem;
+  display: block;
+  width: 100%;
+  font-size: 1.125rem;
+}
+.pageFooter {
+  padding: 3.125rem 0;
+  background-color: #445162;
+}
+.pageFooter::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.pageFooter > h2 {
+  font-size: 1.875rem;
+  margin-bottom: 1em;
+  line-height: 1.2em;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
 }
