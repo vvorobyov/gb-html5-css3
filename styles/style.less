@@ -6,7 +6,7 @@
 @blockquoteBg: #ebebeb;
 
 
-// Impurities
+// Mixins
 .clearfix() {
     content: '';
     display: block;
@@ -21,39 +21,45 @@
     }
 }
 
+.h2() {
+    font-size: 1.875rem;
+}
+
 // Basic
 html {
     font: 16px 'Arial MT', sans-serif;
+    line-height: 1.5em;
 }
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p,
+ul,
+ol {
     margin: 0;
+    padding: 0;
 }
 
-ul, ol {
-    margin: 0;
-}
-
-.cls::after {
-    content: '';
-    display: block;
-    clear: both;
-}
+// .cls::after {
+//     content: '';
+//     display: block;
+//     clear: both;
+// }
 
 // Container
-
 .container {
     width: 1280px;
+    margin: 0 auto;
 }
 
 // Page Header
-
 .pageHeader {
     .pageBlock();
     background-color: @darkColor;
     color: @lightColor;
 
-    & > h1 {
+    &>h1 {
         float: left;
         width: calc(60% - 1rem);
         margin-bottom: 3.125rem;
@@ -61,18 +67,88 @@ ul, ol {
         line-height: 0.85em;
     }
 
-    & > img {
+    &>img {
         float: right;
         width: 470px;
         height: 215px;
     }
 
-    & > ul {
+    &>ul {
         float: left;
         padding-left: 35px;
         margin-top: -0.5rem;
         list-style-image: url(../images/check_icon.png);
         font-size: 1.25rem;
         line-height: 2.25rem;
+    }
+}
+
+// Main
+
+main>section:nth-child(even) {
+    background-color: @oddSectionBg;
+}
+
+
+// About your product
+.aboutProductSection {
+    .pageBlock();
+
+    &>h2 {
+        float: left;
+        width: ~"calc(63.5% - 6.25rem)";
+        margin-bottom: 1em;
+        margin-right: 6.25rem;
+        line-height: 1.2em;
+        .h2();
+        color: @darkColor;
+    }
+
+    &>img {
+        float: right;
+        width: 430px;
+        height: 245px;
+    }
+
+    &>p {
+        float: left;
+        width: ~"calc(63.5% - 6.25rem)";
+        margin-bottom: 1.25rem;
+        margin-right: 6.25rem;
+    }
+}
+
+// Dignity and pluses product
+.productPlusesSection {
+    .pageBlock();
+
+    &>h2 {
+        .h2();
+        margin-bottom: 1em;
+        line-height: 1.2em;
+        color: @darkColor;
+        text-align: center;
+    }  
+
+    &>ul {
+        &::after {
+            .clearfix();
+        }
+
+        &>li {
+            list-style-type: none;
+            float: left;
+            max-width: 538px;
+            padding-left: 40px;
+            background: 0 .375em no-repeat url(../images/plus_icon.gif);
+
+            &:nth-child(n+3) {
+                margin-top: 2rem;
+            }
+
+            &:nth-child(odd) {
+                margin-right: 1.5rem;
+            }
+        }
     }
 }
