@@ -16,19 +16,22 @@
     margin: 0;
     text-decoration: none;
 }
+
 html {
     font: 16px 'Arial MT', sans-serif;
     line-height: 1.5em;
 }
+
 .container {
     width: 1280px;
     margin: 0 auto;
 }
 
-.block{
+.block {
     padding: 50px;
     overflow: auto;
 }
+
 .clr:after {
     content: "";
     display: block;
@@ -46,6 +49,7 @@ html {
 .container>section:nth-child(2n+1) {
     background-color: var(--light2-bg-color);
 }
+
 .left {
     float: left;
 }
@@ -54,7 +58,7 @@ html {
     float: right;
 }
 
-.center{
+.center {
     text-align: center;
 }
 
@@ -96,7 +100,7 @@ ul.check .icon-ok {
     padding-bottom: 1.25em;
 }
 
-.aboutImg{
+.aboutImg {
     width: 430px;
     height: 245px;
 }
