@@ -13,6 +13,10 @@ blockquote {
   margin: 0;
   padding: 0;
 }
+@font-face {
+  font-family: Icons;
+  src: url(../fonts/icons.ttf);
+}
 .container {
   width: 1280px;
   margin: 0 auto;
@@ -248,7 +252,6 @@ main > section:nth-of-type(even) {
   justify-content: space-between;
 }
 .buySection article {
-  float: left;
   width: 300px;
   background-color: #445162;
   border: 1px solid #445162;
@@ -291,12 +294,13 @@ main > section:nth-of-type(even) {
   color: #445162;
   font-weight: 700;
   height: 2.75rem;
+  border-radius: .25rem;
   display: block;
   width: 100%;
   font-size: 1.125rem;
 }
 .pageFooter {
-  padding: 3.125rem 0;
+  padding: 3.125rem 249px;
   background-color: #445162;
 }
 .pageFooter::after {
@@ -310,5 +314,100 @@ main > section:nth-of-type(even) {
   line-height: 1.2em;
   font-weight: 400;
   color: #fff;
+  width: 100%;
   text-align: center;
+}
+.pageFooter > .footerFlex {
+  display: flex;
+  justify-content: space-between;
+}
+.pageFooter > .footerFlex > form {
+  width: 500px;
+}
+.pageFooter > .footerFlex > form > input[type="text"],
+.pageFooter > .footerFlex > form > input[type="email"],
+.pageFooter > .footerFlex > form > textarea {
+  width: 100%;
+  display: block;
+  margin-bottom: 1.125rem;
+  border: none;
+  border-radius: .25rem;
+  color: #445162;
+  padding: .875rem .725rem;
+  box-sizing: border-box;
+}
+.pageFooter > .footerFlex > form > input[type="text"]::placeholder,
+.pageFooter > .footerFlex > form > input[type="email"]::placeholder,
+.pageFooter > .footerFlex > form > textarea::placeholder {
+  color: #445162;
+}
+.pageFooter > .footerFlex > form > textarea {
+  height: 170px;
+}
+.pageFooter > .footerFlex > form > input[type="submit"] {
+  background-color: #fff;
+  border: none;
+  text-transform: capitalize;
+  color: #445162;
+  font-weight: 700;
+  height: 2.75rem;
+  border-radius: .25rem;
+  padding: 12px 0;
+  width: 140px;
+}
+.pageFooter > .footerFlex > address a {
+  color: #fff;
+  text-decoration: none;
+  font-style: normal;
+}
+.pageFooter > .footerFlex > address > .contacts > a {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+.pageFooter > .footerFlex > address > .contacts > a > .icons {
+  font-size: 1.5rem;
+}
+.pageFooter > .footerFlex > address > .socials {
+  font-size: 2.625rem;
+}
+.copyright {
+  background-color: #f5f5f5;
+  text-align: center;
+  color: #445162;
+  font-size: .875rem;
+}
+.icons {
+  font-style: normal;
+}
+.icons::before {
+  font-family: 'Icons';
+  display: inline-block;
+  line-height: 1em;
+}
+.icons.icon-skype::before {
+  content: '\e801';
+}
+.icons.icon-icq::before {
+  content: '\f304';
+}
+.icons.icon-email::before {
+  content: '\e802';
+}
+.icons.icon-phone::before {
+  content: '\e803';
+}
+.icons.icon-twiter::before {
+  content: '\f30a';
+}
+.icons.icon-facebook::before {
+  content: '\f30d';
+}
+.icons.icon-linkedin::before {
+  content: '\f319';
+}
+.icons.icon-google::before {
+  content: '\f310';
+}
+.icons.icon-youtube::before {
+  content: '\f167';
 }

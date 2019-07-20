@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <title>Lesson-1</title>
-        <link rel="stylesheet" href="fonts/myfonts/css/myfont.css">
         <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
@@ -220,27 +219,31 @@
             </main>
             <footer class="pageFooter">
                 <h2 class="center">Contacts</h2>
-                <form action="#">
-                    <input type="text" name="name" placeholder="Your name:">
-                    <input type="email" name="email" placeholder="Your email:">
-                    <textarea name="message" placeholder="Your message"></textarea>
-                    <input type="submit" value="SEND">
-                </form>
-                <address>
-                    <p><a href="skype:here_your_skype"><span class="skype"></span>here_your_skype</a></p>
-                    <p><a href="icq:279679659"><span class="icq"></span>279679659</a></p>
-                    <p><a href="mailto:psdhtmlcss@mail.ru"><span class="email"></span>psdhtmlcss@mail.ru</a></p>
-                    <p><a href="tel:800045685555"><span class="phone"></span>80 00 4568 55 55</a></p>
-                    <p>
-                        <a href="#"><span class="twiter"></span></a>
-                        <a href="#"><span class="facebook"></span></a>
-                        <a href="#"><span class="linkedin"></span></a>
-                        <a href="#"><span class="google"></span></a>
-                        <a href="#"><span class="youtube"></span></a>
-                    </p>
-                </address>
-                <div class="copyright">Copyright &copy; 2019 Product name - PSD HTML CSS</div>
+                <div class="footerFlex">
+                    <form action="#">
+                        <input type="text" name="name" placeholder="Your name:">
+                        <input type="email" name="email" placeholder="Your email:">
+                        <textarea name="message" placeholder="Your message"></textarea>
+                        <input type="submit" value="SEND">
+                    </form>
+                    <address>
+                        <div class="contacts">
+                            <a href="skype:here_your_skype"><i class="icons icon-skype"></i> here_your_skype</a>
+                            <a href="icq:279679659"><i class="icons icon-icq"></i> 279679659</a>
+                            <a href="mailto:psdhtmlcss@mail.ru"><i class="icons icon-email"></i> psdhtmlcss@mail.ru</a>
+                            <a href="tel:800045685555"><i class="icons icon-phone"></i> 80 00 4568 55 55</a>
+                        </div>
+                        <div class="socials">
+                            <a href="#"><i class="icons icon-twiter"></i></a>
+                            <a href="#"><i class="icons icon-facebook"></i></a>
+                            <a href="#"><i class="icons icon-linkedin"></i></a>
+                            <a href="#"><i class="icons icon-google"></i></a>
+                            <a href="#"><i class="icons icon-youtube"></i></a>
+                        </div>
+                    </address>
+                </div>
             </footer>
+            <div class="copyright">Copyright &copy; 2019 Product name - PSD HTML CSS</div>
         </div>
     </body>
 </html>

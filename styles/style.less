@@ -42,6 +42,7 @@
     color: @darkColor;
     font-weight: 700;
     height: 2.75rem;
+    border-radius: .25rem;
 }
 
 // Basic
@@ -62,11 +63,10 @@ blockquote {
     padding: 0;
 }
 
-// .cls::after {
-//     content: '';
-//     display: block;
-//     clear: both;
-// }
+@font-face {
+    font-family: Icons;
+    src: url(../fonts/icons.ttf);
+}
 
 // Container
 .container {
@@ -291,20 +291,21 @@ main>section:nth-of-type(even) {
 // Buy it now
 .buySection {
     .pageBlock(9.0625rem);
+
     &>h2 {
         .h2();
         color: @darkColor;
         text-align: center;
     }
 
-    &>.buyFlex{
+    &>.buyFlex {
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
     }
 
     & article {
-        float: left;
+        // float: left;
         width: 300px;
         background-color: @darkColor;
         border: 1px solid @darkColor;
@@ -324,6 +325,7 @@ main>section:nth-of-type(even) {
             font-weight: 400;
             margin-bottom: 1rem;
         }
+
         &>.coast {
             font-size: 2.5rem;
             padding: 1rem;
@@ -340,6 +342,7 @@ main>section:nth-of-type(even) {
             margin: 1rem 0;
             line-height: 1.5rem;
         }
+
         & button {
             .button();
             display: block;
@@ -351,12 +354,124 @@ main>section:nth-of-type(even) {
 
 // Page footer
 .pageFooter {
-    .pageBlock(0);
+    .pageBlock(249px);
     background-color: @darkColor;
 
     &>h2 {
         .h2();
         color: @lightColor;
+        width: 100%;
         text-align: center;
     }
+
+    &>.footerFlex {
+        display: flex;
+        justify-content: space-between;
+
+        &>form {
+            width: 500px;
+
+            &>input[type="text"],
+            &>input[type="email"],
+            &>textarea {
+                width: 100%;
+                display: block;
+                margin-bottom: 1.125rem;
+                border: none;
+                border-radius: .25rem;
+                color: @darkColor;
+                padding: .875rem .725rem;
+                box-sizing: border-box;
+
+                &::placeholder {
+                    color: @darkColor;
+                }
+            }
+
+            &>textarea {
+                height: 170px;
+            }
+
+            &>input[type="submit"] {
+                .button();
+                padding: 12px 0;
+                width: 140px;
+            }
+        }
+
+        &>address {
+            & a {
+                color: @lightColor;
+                text-decoration: none;
+                font-style: normal;
+            }
+
+            &>.contacts>a {
+                display: block;
+                margin-bottom: 1.25rem;
+
+                &>.icons {
+                    font-size: 1.5rem;
+                }
+            }
+
+            &>.socials {
+                font-size: 2.625rem;
+            }
+        }
+    }
+}
+
+.copyright {
+    background-color: @oddSectionBg;
+    text-align: center;
+    color: @darkColor;
+    font-size: .875rem;
+}
+
+.icons {
+    font-style: normal;
+
+    &::before {
+        font-family: 'Icons';
+        display: inline-block;
+        line-height: 1em;
+    }
+
+    &.icon-skype::before {
+        content: '\e801';
+    }
+
+    &.icon-icq::before {
+        content: '\f304';
+    }
+
+    &.icon-email::before {
+        content: '\e802';
+    }
+
+    &.icon-phone::before {
+        content: '\e803';
+    }
+
+    &.icon-twiter::before {
+        content: '\f30a';
+    }
+
+    &.icon-facebook::before {
+        content: '\f30d';
+    }
+
+    &.icon-linkedin::before {
+        content: '\f319';
+    }
+
+    &.icon-google::before {
+        content: '\f310';
+    }
+
+    &.icon-youtube::before {
+        content: '\f167';
+    }
+
 }
