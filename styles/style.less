@@ -15,7 +15,10 @@
 
 .pageBlock(@lrPadding: 3.125rem) {
     padding: 3.125rem @lrPadding;
-
+    
+    @media (max-width: 640px) {
+        padding: 1.5625rem calc(@lrPadding/2)
+    }
     &::after {
         .clearfix();
     }
@@ -72,6 +75,19 @@ blockquote {
 .container {
     width: 1280px;
     margin: 0 auto;
+
+    @media (max-width: 1280px) {
+        width: 960px;
+    }
+
+    @media (max-width: 960px) {
+        width: 800px;
+    }
+
+    @media (max-width: 800px) {
+        width: 100%;
+        margin: 0;
+    }
 }
 
 // Page Header
@@ -82,28 +98,61 @@ blockquote {
 
     &>h1 {
         float: left;
-        width: calc(60% - 1rem);
+        width: ~"calc(100% - 1rem - 470px)";
         margin-bottom: 3.125rem;
         font-size: 3.25rem;
         line-height: 0.85em;
         font-weight: 400;
+
+        @media (max-width: 1280px) {
+            width: ~"calc(60% - 1rem)";
+        }
+
+        @media (max-width: 960px) {
+            width: 100%;
+            float: none;
+            margin-bottom: 1.5rem;
+        }
+        @media (max-width: 640px) {
+            font-size: 2.5rem;
+        }
     }
 
     &>img {
         float: right;
         width: 470px;
         height: 215px;
+
+        @media (max-width: 1280px) {
+            width: 40%;
+            height: auto;
+        }
+
+        @media (max-width: 960px) {
+            width: 100%;
+            float: none;
+        }
     }
 
     &>ul {
         float: left;
-        width: calc(60% - 1rem);
+        width: ~"calc(100% - 1rem - 470px)";
         box-sizing: border-box;
         padding-left: 35px;
         margin-top: -0.5rem;
         list-style-image: url(../images/check_icon.png);
         font-size: 1.25rem;
         line-height: 2.25rem;
+
+        @media (max-width: 1280px) {
+            width: ~"calc(60% - 1rem)";
+        }
+        
+        @media (max-width: 960px) {
+            width: 100%;
+            float: none;
+            margin-top: 1.5rem;    
+        }
     }
 }
 
