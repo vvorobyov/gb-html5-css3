@@ -240,17 +240,29 @@ main>section:nth-of-type(even) {
         &>li {
             list-style-type: none;
             float: left;
-            max-width: 538px;
+            width: ~"calc(50% - 0.75rem)";
             padding-left: 40px;
+            box-sizing: border-box;
             background: 0 .375em no-repeat url(../images/plus_icon.gif);
 
-            &:nth-of-type(n+3) {
-                margin-top: 2rem;
+            @media (min-width: 961px) {
+                &:nth-of-type(n+3) {
+                    margin-top: 2rem;
+                }
+
+                &:nth-of-type(odd) {
+                    margin-right: 1.5rem;
+                }
+            }
+            @media (max-width: 960px) {
+                width: 100%;
+                float: none;
+
+                &:nth-of-type(n+2){
+                    margin-top: 2rem;
+                }
             }
 
-            &:nth-of-type(odd) {
-                margin-right: 1.5rem;
-            }
         }
     }
 }

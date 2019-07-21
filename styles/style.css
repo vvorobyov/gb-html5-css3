@@ -218,15 +218,27 @@ main > section:nth-of-type(even) {
 .productPlusesSection > ul > li {
   list-style-type: none;
   float: left;
-  max-width: 538px;
+  width: calc(50% - 0.75rem);
   padding-left: 40px;
+  box-sizing: border-box;
   background: 0 0.375em no-repeat url(../images/plus_icon.gif);
 }
-.productPlusesSection > ul > li:nth-of-type(n+3) {
-  margin-top: 2rem;
+@media (min-width: 961px) {
+  .productPlusesSection > ul > li:nth-of-type(n+3) {
+    margin-top: 2rem;
+  }
+  .productPlusesSection > ul > li:nth-of-type(odd) {
+    margin-right: 1.5rem;
+  }
 }
-.productPlusesSection > ul > li:nth-of-type(odd) {
-  margin-right: 1.5rem;
+@media (max-width: 960px) {
+  .productPlusesSection > ul > li {
+    width: 100%;
+    float: none;
+  }
+  .productPlusesSection > ul > li:nth-of-type(n+2) {
+    margin-top: 2rem;
+  }
 }
 .screenshotsSection {
   padding: 3.125rem 3.125rem;
