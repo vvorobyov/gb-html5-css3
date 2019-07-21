@@ -171,23 +171,50 @@ main>section:nth-of-type(even) {
         float: left;
         width: ~"calc(63.5% - 6.25rem)";
         margin-bottom: 1em;
-        margin-right: 6.25rem;
         line-height: 1.2em;
         .h2();
         color: @darkColor;
+
+        @media (max-width: 1280px) {
+            width: ~"calc(60% - 2rem)";
+        }
+
+        @media (max-width: 960px) {
+            width: 100%;
+            float: none;
+        }
     }
 
     &>img {
         float: right;
         width: 430px;
         height: 245px;
+
+        @media (max-width: 1280px) {
+            width: 40%;
+            height: auto;
+        }
+
+        @media (max-width: 960px) {
+            width: 100%;
+            float: none;
+        }
     }
 
     &>p {
         float: left;
         width: ~"calc(63.5% - 6.25rem)";
         margin-bottom: 1.25rem;
-        margin-right: 6.25rem;
+
+        @media (max-width: 1280px) {
+            width: ~"calc(60% - 2rem)";
+        }
+        
+        @media (max-width: 960px) {
+            width: 100%;
+            float: none;
+            margin-top: 1.5rem;    
+        }
 
         &:last-of-type {
             margin-bottom: 0;

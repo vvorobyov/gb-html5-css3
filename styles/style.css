@@ -135,23 +135,56 @@ main > section:nth-of-type(even) {
 .aboutProductSection > h2 {
   float: left;
   width: calc(63.5% - 6.25rem);
-  margin-right: 6.25rem;
   font-size: 1.875rem;
   margin-bottom: 1em;
   line-height: 1.2em;
   font-weight: 400;
   color: #445162;
 }
+@media (max-width: 1280px) {
+  .aboutProductSection > h2 {
+    width: calc(60% - 2rem);
+  }
+}
+@media (max-width: 960px) {
+  .aboutProductSection > h2 {
+    width: 100%;
+    float: none;
+  }
+}
 .aboutProductSection > img {
   float: right;
   width: 430px;
   height: 245px;
 }
+@media (max-width: 1280px) {
+  .aboutProductSection > img {
+    width: 40%;
+    height: auto;
+  }
+}
+@media (max-width: 960px) {
+  .aboutProductSection > img {
+    width: 100%;
+    float: none;
+  }
+}
 .aboutProductSection > p {
   float: left;
   width: calc(63.5% - 6.25rem);
   margin-bottom: 1.25rem;
-  margin-right: 6.25rem;
+}
+@media (max-width: 1280px) {
+  .aboutProductSection > p {
+    width: calc(60% - 2rem);
+  }
+}
+@media (max-width: 960px) {
+  .aboutProductSection > p {
+    width: 100%;
+    float: none;
+    margin-top: 1.5rem;
+  }
 }
 .aboutProductSection > p:last-of-type {
   margin-bottom: 0;
