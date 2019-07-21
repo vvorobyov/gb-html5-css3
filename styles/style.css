@@ -46,6 +46,8 @@ blockquote {
 }
 .pageHeader > ul {
   float: left;
+  width: calc(59%);
+  box-sizing: border-box;
   padding-left: 35px;
   margin-top: -0.5rem;
   list-style-image: url(../images/check_icon.png);
