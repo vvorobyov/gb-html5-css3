@@ -505,7 +505,7 @@ main>section:nth-of-type(even) {
 
 // Page footer
 .pageFooter {
-    .pageBlock(249px);
+    .pageBlock();
     background-color: @darkColor;
 
     &>h2 {
@@ -517,11 +517,26 @@ main>section:nth-of-type(even) {
 
     &>.footerFlex {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        @media (max-width: 959px) {
+            display: block;
+        }
 
         &>form {
             width: 500px;
+            margin-right: 46px;
 
+            @media (max-width: 959px) {
+                margin: 0 auto 30px;
+            }
+            @media (max-width: 640px) {
+                width: 100%
+            }
+    
+            &>input[type="submit"]{
+                display: block;
+                margin: 0 auto;
+            }
             &>input[type="text"],
             &>input[type="email"],
             &>textarea {
@@ -533,6 +548,7 @@ main>section:nth-of-type(even) {
                 color: @darkColor;
                 padding: .875rem .725rem;
                 box-sizing: border-box;
+                
 
                 &::placeholder {
                     color: @darkColor;
@@ -551,6 +567,10 @@ main>section:nth-of-type(even) {
         }
 
         &>address {
+            @media (max-width: 959px) {
+                text-align: center;
+            }
+
             & a {
                 color: @lightColor;
                 text-decoration: none;

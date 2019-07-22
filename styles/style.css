@@ -507,12 +507,12 @@ main > section:nth-of-type(even) {
   font-size: 1.125rem;
 }
 .pageFooter {
-  padding: 3.125rem 249px;
+  padding: 3.125rem 3.125rem;
   background-color: #445162;
 }
 @media (max-width: 640px) {
   .pageFooter {
-    padding: 1.5625rem calc(124.5px);
+    padding: 1.5625rem calc(1.5625rem);
   }
 }
 .pageFooter::after {
@@ -531,10 +531,30 @@ main > section:nth-of-type(even) {
 }
 .pageFooter > .footerFlex {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+}
+@media (max-width: 959px) {
+  .pageFooter > .footerFlex {
+    display: block;
+  }
 }
 .pageFooter > .footerFlex > form {
   width: 500px;
+  margin-right: 46px;
+}
+@media (max-width: 959px) {
+  .pageFooter > .footerFlex > form {
+    margin: 0 auto 30px;
+  }
+}
+@media (max-width: 640px) {
+  .pageFooter > .footerFlex > form {
+    width: 100%;
+  }
+}
+.pageFooter > .footerFlex > form > input[type="submit"] {
+  display: block;
+  margin: 0 auto;
 }
 .pageFooter > .footerFlex > form > input[type="text"],
 .pageFooter > .footerFlex > form > input[type="email"],
@@ -566,6 +586,11 @@ main > section:nth-of-type(even) {
   border-radius: .25rem;
   padding: 12px 0;
   width: 140px;
+}
+@media (max-width: 959px) {
+  .pageFooter > .footerFlex > address {
+    text-align: center;
+  }
 }
 .pageFooter > .footerFlex > address a {
   color: #fff;
