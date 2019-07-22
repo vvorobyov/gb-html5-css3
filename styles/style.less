@@ -279,24 +279,43 @@ main>section:nth-of-type(even) {
     &>article {
         float: left;
         width: ~"calc(50% - .5rem)";
+        overflow: auto;
 
-        &:nth-of-type(n+3) {
-            margin-top: 1.875rem;
+        @media (min-width: 960px) {
+            &:nth-of-type(n+3) {
+                margin-top: 1.875rem;
+            }
+
+            &:nth-of-type(odd) {
+                margin-right: 1rem;
+            }
         }
 
-        &:nth-of-type(odd) {
-            margin-right: 1rem;
+        @media (max-width: 959px) {
+            float: none;
+            width: 100%;
+
+            &:nth-of-type(n+2) {
+                margin-top: 1.875rem;
+            }
         }
 
         &>img {
             float: left;
             width: 200px;
             height: 150px;
+            margin-right: .5rem;
+            @media (max-width: 479px) {
+                float: none;
+            }
         }
 
         &>h3,
         &>p {
             padding-left: ~"calc(200px + 1rem)";
+            @media (max-width: 1279px) {
+                padding-left: 0;
+            }
         }
 
         &>h3 {

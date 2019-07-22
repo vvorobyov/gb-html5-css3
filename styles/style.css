@@ -264,21 +264,45 @@ main > section:nth-of-type(even) {
 .screenshotsSection > article {
   float: left;
   width: calc(50% - .5rem);
+  overflow: auto;
 }
-.screenshotsSection > article:nth-of-type(n+3) {
-  margin-top: 1.875rem;
+@media (min-width: 960px) {
+  .screenshotsSection > article:nth-of-type(n+3) {
+    margin-top: 1.875rem;
+  }
+  .screenshotsSection > article:nth-of-type(odd) {
+    margin-right: 1rem;
+  }
 }
-.screenshotsSection > article:nth-of-type(odd) {
-  margin-right: 1rem;
+@media (max-width: 959px) {
+  .screenshotsSection > article {
+    float: none;
+    width: 100%;
+  }
+  .screenshotsSection > article:nth-of-type(n+2) {
+    margin-top: 1.875rem;
+  }
 }
 .screenshotsSection > article > img {
   float: left;
   width: 200px;
   height: 150px;
+  margin-right: .5rem;
+}
+@media (max-width: 479px) {
+  .screenshotsSection > article > img {
+    float: none;
+  }
 }
 .screenshotsSection > article > h3,
 .screenshotsSection > article > p {
   padding-left: calc(200px + 1rem);
+}
+@media (max-width: 1279px) {
+  .screenshotsSection > article > h3,
+  .screenshotsSection > article > p {
+    padding-left: 0;
+  }
 }
 .screenshotsSection > article > h3 {
   font-size: 1.5rem;
