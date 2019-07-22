@@ -299,6 +299,9 @@ main>section:nth-of-type(even) {
                 margin-top: 1.875rem;
             }
         }
+        @media (max-width: 479px) {
+            text-align: center;
+        }
 
         &>img {
             float: left;
@@ -423,7 +426,7 @@ main>section:nth-of-type(even) {
 
 // Buy it now
 .buySection {
-    .pageBlock(9.0625rem);
+    .pageBlock();
 
     &>h2 {
         .h2();
@@ -434,21 +437,36 @@ main>section:nth-of-type(even) {
     &>.buyFlex {
         display: flex;
         align-items: flex-end;
-        justify-content: space-between;
+        justify-content: center;
+        @media (max-width: 799px) {
+            display: block;
+        }
+
     }
 
     & article {
-        // float: left;
         width: 300px;
         background-color: @darkColor;
         border: 1px solid @darkColor;
         border-radius: .25rem;
         box-sizing: border-box;
         overflow: hidden;
+        margin-right: 30px;
         padding: 1rem 1.25rem 1.25rem;
 
-        &:last-of-type {
+        @media (max-width: 799px) {
+            width: 100%;
+
+            &:nth-of-type(n+2) {
+                margin-top: 30px;
+            }
+
+        }
+
+        @media (min-width: 960px) {
+            &:last-of-type {
             margin-right: 0;
+            }
         }
 
         &>h3 {
