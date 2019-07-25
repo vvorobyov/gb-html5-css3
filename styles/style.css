@@ -9,7 +9,8 @@ h3,
 p,
 ul,
 ol,
-blockquote {
+blockquote,
+body {
   margin: 0;
   padding: 0;
 }
@@ -590,6 +591,17 @@ main > section:nth-of-type(even) {
   color: #445162;
   padding: .875rem .725rem;
   box-sizing: border-box;
+  border-left: 2px solid #fff;
+}
+.pageFooter > .footerFlex > form > input[type="text"]:invalid,
+.pageFooter > .footerFlex > form > input[type="email"]:invalid,
+.pageFooter > .footerFlex > form > textarea:invalid {
+  border-left: 2px solid #ff0000a0;
+}
+.pageFooter > .footerFlex > form > input[type="text"]:focus,
+.pageFooter > .footerFlex > form > input[type="email"]:focus,
+.pageFooter > .footerFlex > form > textarea:focus {
+  outline: none;
 }
 .pageFooter > .footerFlex > form > input[type="text"]::placeholder,
 .pageFooter > .footerFlex > form > input[type="email"]::placeholder,
@@ -597,7 +609,8 @@ main > section:nth-of-type(even) {
   color: #445162;
 }
 .pageFooter > .footerFlex > form > textarea {
-  height: 170px;
+  min-height: 170px;
+  resize: vertical;
 }
 .pageFooter > .footerFlex > form > input[type="submit"] {
   background-color: #fff;

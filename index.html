@@ -226,8 +226,8 @@
                 <h2 class="center">Contacts</h2>
                 <div class="footerFlex">
                     <form action="#">
-                        <input type="text" name="name" placeholder="Your name:" required>
-                        <input type="email" name="email" placeholder="Your email:" required>
+                        <input type="text" name="name" placeholder="Your name:" required pattern="^([А-Яа-яA-Za-z]{3,})( +[А-Яа-яA-Za-z]{3,}){0,2}$">
+                        <input type="email" name="email" placeholder="Your email:" required pattern="^([A-Za-z\._\-]+)(@)([A-Za-z\-]+\.)+([A-Za-z]{2,})$">
                         <textarea name="message" placeholder="Your message" required></textarea>
                         <input type="submit" value="SEND">
                     </form>

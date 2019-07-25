@@ -61,7 +61,8 @@ h3,
 p,
 ul,
 ol,
-blockquote {
+blockquote,
+body {
     margin: 0;
     padding: 0;
 }
@@ -575,7 +576,14 @@ main>section:nth-of-type(even) {
                 color: @darkColor;
                 padding: .875rem .725rem;
                 box-sizing: border-box;
+                border-left: 2px solid #fff;
                 
+                &:invalid {
+                    border-left: 2px solid #ff0000a0;
+                }
+                &:focus {
+                    outline: none;
+                }
 
                 &::placeholder {
                     color: @darkColor;
@@ -583,7 +591,8 @@ main>section:nth-of-type(even) {
             }
 
             &>textarea {
-                height: 170px;
+                min-height: 170px;
+                resize: vertical;
             }
 
             &>input[type="submit"] {
