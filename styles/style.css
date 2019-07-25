@@ -121,6 +121,7 @@ main > section:nth-of-type(even) {
 }
 .aboutProductSection {
   padding: 3.125rem 3.125rem;
+  position: relative;
 }
 @media (max-width: 640px) {
   .aboutProductSection {
@@ -132,7 +133,15 @@ main > section:nth-of-type(even) {
   display: block;
   clear: both;
 }
-.aboutProductSection > h2 {
+@media (max-width: 959px) {
+  .aboutProductSection {
+    background-color: #ffffff90;
+  }
+}
+.aboutProductSection > .aboutContent {
+  position: relative;
+}
+.aboutProductSection > .aboutContent > h2 {
   float: left;
   width: calc(63.5% - 6.25rem);
   font-size: 1.875rem;
@@ -140,54 +149,68 @@ main > section:nth-of-type(even) {
   line-height: 1.2em;
   font-weight: 400;
   color: #445162;
+  text-align: center;
 }
 @media (max-width: 1279px) {
-  .aboutProductSection > h2 {
+  .aboutProductSection > .aboutContent > h2 {
     width: calc(60% - 2rem);
   }
 }
 @media (max-width: 959px) {
-  .aboutProductSection > h2 {
+  .aboutProductSection > .aboutContent > h2 {
     width: 100%;
     float: none;
   }
 }
-.aboutProductSection > img {
+.aboutProductSection > .aboutContent > .aboutVideo {
   float: right;
   width: 430px;
-  height: 245px;
 }
 @media (max-width: 1279px) {
-  .aboutProductSection > img {
+  .aboutProductSection > .aboutContent > .aboutVideo {
     width: 40%;
-    height: auto;
   }
 }
 @media (max-width: 959px) {
-  .aboutProductSection > img {
-    width: 100%;
-    float: none;
+  .aboutProductSection > .aboutContent > .aboutVideo {
+    display: none;
   }
 }
-.aboutProductSection > p {
+.aboutProductSection > .aboutContent > p {
   float: left;
   width: calc(63.5% - 6.25rem);
   margin-bottom: 1.25rem;
 }
 @media (max-width: 1279px) {
-  .aboutProductSection > p {
+  .aboutProductSection > .aboutContent > p {
     width: calc(60% - 2rem);
   }
 }
 @media (max-width: 959px) {
-  .aboutProductSection > p {
+  .aboutProductSection > .aboutContent > p {
     width: 100%;
     float: none;
     margin-top: 1.5rem;
   }
 }
-.aboutProductSection > p:last-of-type {
+.aboutProductSection > .aboutContent > p:last-of-type {
   margin-bottom: 0;
+}
+.aboutProductSection > .aboutCover {
+  display: none;
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+@media (max-width: 959px) {
+  .aboutProductSection > .aboutCover {
+    display: block;
+  }
 }
 .productPlusesSection {
   padding: 3.125rem 3.125rem;
