@@ -669,7 +669,7 @@ main > section:nth-of-type(even) {
 .icons.icon-phone::before {
   content: '\e803';
 }
-.icons.icon-twiter::before {
+.icons.icon-twitter::before {
   content: '\f30a';
 }
 .icons.icon-facebook::before {
